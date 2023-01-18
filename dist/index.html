@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <title>Validation du formulaire</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="formBlock">
+                <div class="formContent">
+                    <div class="titleBlock">
+                        <h1>Validation des champs d'un formulaire</h1>
+                        <h3>Exemple de la validation des champs d'un formulaire avec</h3>
+                        <h2>Html5 + Vanilla JS + CSS Grid layout</h2>
+                    </div>
+                    <div class="text-content">
+                        <small>(<span>*</span>) Champs obligatoires</small>
+                    </div>
+                    <form action="" method="get" onkeyup="buttonEnable()">
+                        <div class="formGrid">
+                            <div class="formColumn">
+                                <label for="firstName" id="label__firstName" class="">Prénom</label>
+                                <input type="text" name="firstName" id="firstName">
+                                <div id="alert__firstName" class="alertBlock error deleteMessage">Le prénom doit contenir au moins 3 lettres (pas des nombres ou des simboles)</div>
+                            </div>
+                            <div class="formColumn">
+                                <label for="lastName" id="label__lastName" class="">Nom</label>
+                                <input type="text" name="lastName" id="lastName">
+                                <div id="alert__lastName" class="alertBlock error deleteMessage">Le nom doit contenir au moins 3 lettres (pas des nombres ou des simboles)</div>
+                            </div>
+                            <div class="formColumn">
+                                <label for="email" id="label__email" class="">Adresse email</label>
+                                <input type="email" name="email" id="email" >
+                                <div id="alert__email" class="alertBlock error deleteMessage">Merci d'ajouter une adresse mail complète</div>
+                            </div>
+                            <div class="formColumn">
+                                <label for="phone" id="label__phone" class="">Téléphone</label>
+                                <input type="tel" name="phone" id="phone">
+                                <div id="alert__phone" class="alertBlock error deleteMessage">Le téléphone ne doit contenir que de chiffres</div>
+                            </div>
+                            <div class="formColumn">
+                                <label for="password" id="label__password">Mot de passe</label>
+                                <div class="input-group">
+                                    <input type="password" name="password" id="password">
+                                    <a id="displayPass">
+                                        <img src="./svg/eye.svg" alt="" srcset="">
+                                    </a>
+                                </div>
+                                <div id="alert__password" class="alertBlock error deleteMessage">
+                                    Le mot de passe doit contenir au moins :
+                                    <ul>
+                                        <li class="invalid1">12 caractères</li>
+                                        <li class="invalid2">Une mayuscule</li>
+                                        <li class="invalid3">Un caractère spécial</li>
+                                        <li class="invalid4">Une chiffre</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="formColumn">
+                                <label for="confPass" id="label__confPass">Confirmation mot de passe</label>
+                                <div class="input-group">
+                                    <input type="password" name="confPass" id="confPass">
+                                    <a id="displayConfPass">
+                                        <img src="./svg/eye.svg" alt="" srcset="">
+                                    </a>
+                                </div>
+                                <div id="alert__confPass" class="alertBlock error deleteMessage">
+                                    Le mot de passe doit contenir au moins :
+                                    <ul>
+                                        <li class="invalid5">12 caractères</li>
+                                        <li class="invalid6">Une mayuscule</li>
+                                        <li class="invalid7">Un caractère spécial</li>
+                                        <li class="invalid8">Une chiffre</li>
+                                        <li class="invalid9">Il doit corresponde au mot de passe</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="fullColumn">
+                                <button class="sendBtn" disabled type="submit">envoyer</button>
+                            </div>
+                        </div>             
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+           <div class="footer-block">
+                <div class="footer-start-content">
+                    <a href="http://taniagaitan.free.fr/" target="_blank" rel="noopener noreferrer">
+                        <small>Powered by</small>
+                    <img src="./svg/tania-gaitan-small.svg" width="130" alt="logo tania gaitan"/>
+                    </a>
+                </div>
+                <div class="footer-end-content">
+                    <a href="https://github.com/TaniaGA01" target="_blank" rel="noopener noreferrer">
+                        <small>Tania Gaitan</small>
+                        <img src="./svg/github.svg" width="20"/>
+                    </a>
+                </div>
+           </div>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+<script src="footer.js"></script>
+</html>

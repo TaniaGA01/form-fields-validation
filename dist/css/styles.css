@@ -1,0 +1,236 @@
+/*
+Author : Tania GAITAN - Front End developper - UX/UI designer
+2021
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Thasadith:wght@400;700&display=swap');
+
+
+:root{
+    --blue:#071A40;
+    --blueDark: #011526;
+    --green: #858C4D;
+    --greenLight: #D9D7BA;
+    --greenDark:#333715;
+    --grayDark: #8C8A80;
+}
+html{
+    height: 100%;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    font-family: 'Thasadith', sans-serif;
+    font-weight: 700;
+    flex-direction: column;
+    background-color: var(--blueDark);
+}
+.wrapper {
+    padding: 5rem 0;
+}
+h1 {
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+}
+h2{
+    margin: 0 0 2rem 0;
+}
+h3{
+    margin: 0;
+}
+.titleBlock {
+    text-align: center;
+    color: var(--blueDark);
+}
+.text-content {
+    margin-bottom: 1rem;
+    font-style: italic;
+    color: var(--greenDark);
+}
+.text-content span {
+    color: #d22623;
+}
+label:before{
+    content: "* ";
+    color: #d22623;
+}
+label.succes:before{
+    content: "* ";
+    color: green;
+}
+.container{
+    width: 60%;
+    margin: 0 auto;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+button{
+    background: var(--blueDark);
+    border-radius: 0.3rem;
+    border: 0;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1rem;
+}
+button:disabled {
+    background: var(--grayDark);
+}
+button:disabled:hover {
+    background: var(--grayDark);
+    cursor: not-allowed;
+}
+button:hover {
+    background: var(--green);
+    cursor: pointer;
+}
+.sendBtn {
+    margin-top: 1rem;
+}
+.formBlock{
+    width: 100%;
+    background-color: var(--greenLight);
+    padding: 2rem 0;
+    border-radius: 0.5rem;
+}
+.formBlock form {
+    width: 100%;
+    color: var(--greenDark);
+}
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 1rem;
+}
+.formContent {
+    padding: 40px;
+}
+.formColumn {
+    display: grid;
+    position: relative;
+}
+.formColumn label{
+    line-height: 2rem;
+}
+.error{
+    color: red !important;
+}
+.borderError{
+    border: 2px solid red !important ;
+}
+.succes{
+    color: green !important;
+}
+.borderSucces{
+    border: 2px solid green !important ;
+}
+.input-group {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input-group input {
+    width: 100%;
+    border-radius: 0.3rem 0 0 0.3rem;
+}
+.input-group a {
+    background: var(--green);
+    padding: 0.54rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0 0.3rem 0.3rem 0;
+}
+.input-group a:hover {
+    background: var(--blue);
+    cursor: pointer;
+}
+input {
+    border-style: hidden;
+    border-radius: 0.3rem;
+    padding: 0.8rem;
+}
+input:focus{
+    outline: none;
+}
+.fullColumn{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-content: center;
+}
+.alertBlock {
+    position: absolute;
+    margin-top: 5rem;
+    line-height: 1rem;
+    padding: 5px 10px;
+    width: 94%;
+    background-color: rgba(255,255,255,0.8);
+    z-index: 999;
+    font-size: 0.8rem;
+    -webkit-box-shadow: 1px 1px 8px 0px rgb(0 0 0 / 16%);
+    box-shadow: 1px 1px 8px 0px rgb(0 0 0 / 16%);
+}
+.deleteMessage{
+    display: none;
+}
+.showMessage{
+    display: block;
+}
+footer{
+    position: relative;
+    width: 100%;
+}
+.footer-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-start-content a{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #6d6d6d;
+    padding: 0 0 2rem 0;
+    justify-content: flex-start;
+    text-decoration: none;
+}
+.footer-start-content a:hover,
+.footer-end-content a:hover{
+    color: #8C8A80;
+}
+
+.footer-end-content a{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #6d6d6d;
+    padding: 0 0 2rem 0;
+    justify-content: flex-end;
+    text-decoration: none;
+}
+.footer-start-content img,
+.footer-end-content img {
+    margin-left: 10px;
+}
+/*========== RESPONSIVE ============*/
+@media only screen and (max-width: 768px) {
+    .container{
+        display: block;
+        width: 90%;
+    }
+    .formGrid{
+        display: block;
+    }
+    .alertBlock {
+        position: relative;
+        margin-top: 0.1rem;
+    }
+}
